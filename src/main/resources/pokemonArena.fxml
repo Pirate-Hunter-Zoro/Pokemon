@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane prefHeight="311.0" prefWidth="161.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Fearsome_Foursome.Application.Controllers.ArenaController">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="1000.0" layoutX="6.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@Images/forestBackGround.jpg" />
+            </image>
+        </ImageView>
+      <ImageView fx:id="supportMoveEnemy" fitHeight="500.0" fitWidth="500.0" layoutX="420.0" layoutY="-70.0" pickOnBounds="true" preserveRatio="true" scaleX="0.75" scaleY="0.75" scaleZ="0.75">
+         <image>
+            <Image url="@Sprites/AGILITY.png" />
+         </image>
+      </ImageView>
+        <ImageView fx:id="enemySprite" fitHeight="200.0" fitWidth="200.0" layoutX="550.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" scaleX="0.75" scaleY="0.75" scaleZ="0.75" style="-fx-background-size: contain;">
+            <image>
+                <Image url="@Sprites/SnorlaxEnemy.png" />
+            </image>
+        </ImageView>
+      <ImageView fx:id="playerTackleSprite" fitHeight="200.0" fitWidth="200.0" layoutX="520.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" scaleX="0.75" scaleY="0.75" scaleZ="0.75">
+         <image>
+            <Image url="@Sprites/SceptileAlly.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="attackMoveEnemy" fitHeight="250.0" fitWidth="250.0" layoutX="400.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" rotate="-150.0">
+         <image>
+            <Image url="@Sprites/SURF.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="attackMovePlayer" fitHeight="250.0" fitWidth="250.0" layoutX="370.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" rotate="20.0">
+         <image>
+            <Image url="@Sprites/HYPERBEAM.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="enemyTackleSprite" fitHeight="200.0" fitWidth="200.0" layoutX="350.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Sprites/SnorlaxEnemy.png" />
+         </image>
+      </ImageView>
+        <ImageView fx:id="playerSprite" fitHeight="200.0" fitWidth="200.0" layoutX="265.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Sprites/StaraptorAlly.png" />
+            </image>
+        </ImageView>
+      <ImageView fx:id="supportMovePlayer" fitHeight="500.0" fitWidth="500.0" layoutX="108.0" layoutY="-32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Sprites/RECOVER.png" />
+         </image>
+      </ImageView>
+        <FlowPane layoutY="347.0" prefHeight="166.0" prefWidth="327.0" vgap="10.0" AnchorPane.bottomAnchor="1.28570556640625" AnchorPane.rightAnchor="673.0">
+            <children>
+                <TextField fx:id="playerName">
+                    <padding>
+                        <Insets left="10.0" right="5.0" />
+                    </padding>
+                    <FlowPane.margin>
+                        <Insets />
+                    </FlowPane.margin></TextField>
+                <ProgressBar fx:id="playerHealthProgressBar" prefHeight="14.0" prefWidth="200.0" progress="1.0" style="-fx-accent: green;">
+                    <FlowPane.margin>
+                        <Insets right="10.0" />
+                    </FlowPane.margin>
+                    <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                    </padding>
+                </ProgressBar>
+                <Button fx:id="swapPokemonButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#letUserSwitch" prefHeight="25.0" prefWidth="300.0" text="Swap Pokemon" />
+                <Button fx:id="moveButton1" mnemonicParsing="false" onMouseClicked="#chooseMoveOne" prefHeight="25.0" prefWidth="150.0" text="Move 1" />
+                <Button fx:id="moveButton3" mnemonicParsing="false" onMouseClicked="#chooseMoveThree" prefHeight="25.0" prefWidth="150.0" text="Move 2" />
+                <Button fx:id="moveButton4" mnemonicParsing="false" onMouseClicked="#chooseMoveFour" prefHeight="25.0" prefWidth="150.0" text="Move 3" />
+                <Button fx:id="moveButton2" mnemonicParsing="false" onMouseClicked="#chooseMoveTwo" prefHeight="25.0" prefWidth="150.0" text="Move 4" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </FlowPane>
+        <ProgressBar fx:id="enemyHealthProgressBar" layoutX="786.0" layoutY="29.0" prefHeight="14.0" prefWidth="200.0" progress="1.0" style="-fx-accent: green;" AnchorPane.leftAnchor="786.0" AnchorPane.topAnchor="29.0">
+            <padding>
+                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+            </padding></ProgressBar>
+        <Button fx:id="btnQuit" layoutX="945.0" layoutY="464.0" mnemonicParsing="false" onMouseClicked="#goHome" text="Quit" AnchorPane.bottomAnchor="25.28570556640625" AnchorPane.leftAnchor="945.0" />
+        <TextField fx:id="enemyName" layoutX="786.0" layoutY="6.0">
+            <padding>
+                <Insets left="5.0" right="5.0" />
+            </padding></TextField>
+        <TextArea fx:id="userBattleTextLog" editable="false" layoutX="500.0" layoutY="420.0" prefHeight="85.0" prefWidth="325.0" style="-fx-border-color: Black; -fx-background-color: Black;" />
+      <TextArea fx:id="enemyBattleTextLog" editable="false" layoutX="14.0" layoutY="15.0" prefHeight="85.0" prefWidth="325.0" style="-fx-border-color: Black; -fx-background-color: Black;" />
+    </children>
+</AnchorPane>
