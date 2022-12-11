@@ -31,11 +31,14 @@ public enum TurnTracker {
     GLOBAL_TURN_TRACKER(Arena.GLOBAL_ARENA);
 
     /** The three fields of this class */
-    private final Player user;
-    private final Player enemy;
+    private Player user;
+    private Player enemy;
 
     /** Keeps track of who has gone */
     private boolean[] moved;
+
+    /** Store the Arena */
+    private Arena arena;
 
     /**
      * Constructor for this class
@@ -45,6 +48,7 @@ public enum TurnTracker {
         user = arena.getUser();
         enemy = arena.getEnemy();
         moved = new boolean[]{true, true};
+        this.arena = arena;
     }
 
     /**
@@ -58,6 +62,8 @@ public enum TurnTracker {
      * Refresh the round
      */
     public void refresh() {
+        user = arena.getUser();
+        enemy = arena.getEnemy();
         moved = new boolean[]{true, true};
     }
 
