@@ -74,7 +74,7 @@ Finally, the Moves package contains the means of creating new Moves which Pokém
 
 ## How to run it
 *Open terminal, navigate to a location in which you are comfortable copying files, and type in the following command:<br>*
-git clone git@gitlab.bucknell.edu:mtf009/csci205_final_project.git<br>
+git clone https://github.com/Pirate-Hunter-Zoro/Pokemon.git<br>
 *A folder named 'csci205_final_project' should have been created. Navigate into this folder and run the following command:<br>*
 gradle wrapper<br>
 *Once the latter operation completes, run the command:<br>*
