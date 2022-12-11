@@ -73,8 +73,9 @@ The Creatures package is responsible for the creation of all Pokémon creatures.
 Finally, the Moves package contains the means of creating new Moves which Pokémon creatures can perform. Each type of Move implements the Move interface, and the two implementations are AttackMove and SupportMove. AttackMoves performed by a Creature damage the Creature's target, and SupportMoves boost a certain attribute of whichever Creature uses said SupportMove.*
 
 ## How to run it
+NOTE - as of right now, these on the final step, when launching the app and trying to select the difficulty, an InvocationTargetException is thrown, and we are still attempting to find out why. We apologize for any inconvenience! <br>
 *Open terminal, navigate to a location in which you are comfortable copying files, and type in the following command:<br>*
-git clone https://github.com/Pirate-Hunter-Zoro/Pokemon.git<br>
+git clone https://github.com/Pirate-Hunter-Zoro/Pokemon.git <br>
 *A folder named 'Pokemon' should have been created. Navigate into this folder and run the following command:<br>*
 gradle wrapper<br>
 *Once the latter operation completes, run the command:<br>*
