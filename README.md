@@ -76,7 +76,7 @@ Finally, the Moves package contains the means of creating new Moves which Pokém
 NOTE - as of right now, these on the final step, when launching the app and trying to select the difficulty, an InvocationTargetException is thrown, and we are still attempting to find out why. We apologize for any inconvenience! <br>
 *Open terminal, navigate to a location in which you are comfortable copying files, and type in the following command:<br>*
 git clone https://github.com/Pirate-Hunter-Zoro/Pokemon.git <br>
-*A folder named 'Pokemon' should have been created. Navigate into this folder and run the following command:<br>*
+*A folder named 'Pokémon' should have been created. Navigate into this folder and run the following command:<br>*
 gradle wrapper<br>
 *Once the latter operation completes, run the command:<br>*
 ./gradlew run<br>
