@@ -22,9 +22,9 @@
                 <Image url="@Sprites/SnorlaxEnemy.png" />
             </image>
         </ImageView>
-      <ImageView fx:id="supportMoveEnemy" fitHeight="400.0" fitWidth="400.0" layoutX="475.0" pickOnBounds="true" preserveRatio="true" scaleX="0.75" scaleY="0.75" scaleZ="0.75">
+      <ImageView fx:id="supportMoveEnemy" fitHeight="500.0" fitWidth="500.0" layoutX="420.0" layoutY="-70.0" pickOnBounds="true" preserveRatio="true" scaleX="0.75" scaleY="0.75" scaleZ="0.75">
          <image>
-            <Image url="@Sprites/AGILITY.png" />
+            <Image url="@Sprites/RECOVER.png" />
          </image>
       </ImageView>
       <ImageView fx:id="playerTackleSprite" fitHeight="200.0" fitWidth="200.0" layoutX="520.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" scaleX="0.75" scaleY="0.75" scaleZ="0.75">
@@ -49,12 +49,12 @@
       </ImageView>
         <ImageView fx:id="playerSprite" fitHeight="200.0" fitWidth="200.0" layoutX="265.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@Sprites/StaraptorAlly.png" />
+                <Image url="@Sprites/SnorlaxAlly.png" />
             </image>
         </ImageView>
-      <ImageView fx:id="supportMovePlayer" fitHeight="300.0" fitWidth="300.0" layoutX="225.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="supportMovePlayer" fitHeight="500.0" fitWidth="500.0" layoutX="120.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Sprites/RECOVER.png" />
+            <Image url="@Sprites/AGILITY.png" />
          </image>
       </ImageView>
         <FlowPane layoutY="347.0" prefHeight="166.0" prefWidth="327.0" vgap="10.0" AnchorPane.bottomAnchor="1.28570556640625" AnchorPane.rightAnchor="673.0">

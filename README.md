@@ -20,6 +20,8 @@ If you are new to Pokémon, and want to use this application, it may be worth no
 We certainly do not take credit for the images present in the game. Except for the Move animations! We made those, thank you very much, via the following link:<br>
 https://www.piskelapp.com/p/create/sprite <br>
 <br>
+We also converted colors in .gif files (which we converted into .png) via this website:<br>
+https://ezgif.com/maker <br>
 Other images came from the following sources:<br>
 Background <br>
 Menu Background: <br>
