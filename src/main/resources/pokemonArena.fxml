@@ -22,7 +22,7 @@
                 <Image url="@Sprites/SnorlaxEnemy.png" />
             </image>
         </ImageView>
-      <ImageView fx:id="supportMoveEnemy" fitHeight="250.0" fitWidth="250.0" layoutX="525.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" scaleX="0.75" scaleY="0.75" scaleZ="0.75">
+      <ImageView fx:id="supportMoveEnemy" fitHeight="400.0" fitWidth="400.0" layoutX="475.0" pickOnBounds="true" preserveRatio="true" scaleX="0.75" scaleY="0.75" scaleZ="0.75">
          <image>
             <Image url="@Sprites/AGILITY.png" />
          </image>
@@ -52,7 +52,7 @@
                 <Image url="@Sprites/StaraptorAlly.png" />
             </image>
         </ImageView>
-      <ImageView fx:id="supportMovePlayer" fitHeight="250.0" fitWidth="250.0" layoutX="250.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="supportMovePlayer" fitHeight="300.0" fitWidth="300.0" layoutX="225.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Sprites/RECOVER.png" />
          </image>
