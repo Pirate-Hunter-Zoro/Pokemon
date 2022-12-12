@@ -28,6 +28,9 @@ import javafx.util.Duration;
 import org.Fearsome_Foursome.Application.HelloPokemon;
 import org.Fearsome_Foursome.Creatures.Creature;
 
+import java.io.File;
+import java.io.IOException;
+
 import static org.Fearsome_Foursome.Battle.Arena.GLOBAL_ARENA;
 
 public class SupportMove implements Move {
@@ -61,7 +64,7 @@ public class SupportMove implements Move {
         this.name = name;
         this.description = description;
         this.color = color;
-        this.imagePath = "Sprites/" + name + ".png";
+        this.imagePath = "src/main/java/resources/Sprites/" + name + ".png";
     }
 
     /**
@@ -105,19 +108,24 @@ public class SupportMove implements Move {
         }
 
         // just make the supporting move visible for a certain amount of time
-        moveImage.setImage(new Image(this.imagePath));
-        Timeline timeline = new Timeline(
-                new KeyFrame(Duration.ZERO,
-                        event -> this.doAndShowResult(mover),
-                        new KeyValue(moveImage.visibleProperty(), true)),
-                new KeyFrame(Duration.seconds(1),
-                        // does someone need to go next, or is the round complete?
-                        // all of that will be handled with this lambda expression
-                        event -> HelloPokemon.arenaController.progressExchangeOfMoves(mouseEvent),
-                        new KeyValue(moveImage.visibleProperty(), false)
-                )
-        );
-        timeline.play();
+        try {
+            File fileForMoveSprite = new File(this.imagePath);
+            moveImage.setImage(new Image(fileForMoveSprite.toURI().toURL().toExternalForm()));
+            Timeline timeline = new Timeline(
+                    new KeyFrame(Duration.ZERO,
+                            event -> this.doAndShowResult(mover),
+                            new KeyValue(moveImage.visibleProperty(), true)),
+                    new KeyFrame(Duration.seconds(1),
+                            // does someone need to go next, or is the round complete?
+                            // all of that will be handled with this lambda expression
+                            event -> HelloPokemon.arenaController.progressExchangeOfMoves(mouseEvent),
+                            new KeyValue(moveImage.visibleProperty(), false)
+                    )
+            );
+            timeline.play();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

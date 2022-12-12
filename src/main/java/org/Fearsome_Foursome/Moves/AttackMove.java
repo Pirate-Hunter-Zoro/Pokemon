@@ -26,6 +26,8 @@ import javafx.util.Duration;
 import org.Fearsome_Foursome.Application.HelloPokemon;
 import org.Fearsome_Foursome.Creatures.Creature;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 import static org.Fearsome_Foursome.Battle.Arena.GLOBAL_ARENA;
@@ -70,7 +72,7 @@ public class AttackMove implements Move{
         this.name = name;
         this.description = description;
         this.color = color;
-        this.imagePath = "Sprites/" + name + ".png";
+        this.imagePath = "src/main/resources/Sprites/" + name + ".png";
     }
 
     /**
@@ -272,20 +274,25 @@ public class AttackMove implements Move{
      * @param mouseEvent {@link MouseEvent}
      */
     private void createAttackTimeline(ImageView moveImage, Creature attacker, MouseEvent mouseEvent) {
-        moveImage.setImage(new Image(this.imagePath));
-        Timeline timeline = new Timeline(
-                new KeyFrame(Duration.ZERO,
-                        event -> this.doAndShowResult(attacker),
-                        new KeyValue(moveImage.visibleProperty(), true)
-                ),
-                new KeyFrame(Duration.seconds(2),
-                        // does someone need to go next, or is the round complete?
-                        // all of that will be handled with this lambda expression
-                        event -> handlePostDamage(attacker, mouseEvent),
-                        new KeyValue(moveImage.visibleProperty(), false)
-                )
-        );
-        timeline.play();
+        try {
+            File fileForMoveSprite = new File(this.imagePath);
+            moveImage.setImage(new Image(fileForMoveSprite.toURI().toURL().toExternalForm()));
+            Timeline timeline = new Timeline(
+                    new KeyFrame(Duration.ZERO,
+                            event -> this.doAndShowResult(attacker),
+                            new KeyValue(moveImage.visibleProperty(), true)
+                    ),
+                    new KeyFrame(Duration.seconds(2),
+                            // does someone need to go next, or is the round complete?
+                            // all of that will be handled with this lambda expression
+                            event -> handlePostDamage(attacker, mouseEvent),
+                            new KeyValue(moveImage.visibleProperty(), false)
+                    )
+            );
+            timeline.play();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
