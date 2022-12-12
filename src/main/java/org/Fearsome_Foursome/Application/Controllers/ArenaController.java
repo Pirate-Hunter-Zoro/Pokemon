@@ -189,7 +189,9 @@ public class ArenaController {
         playerName.setEditable(false);
         enemyName.setEditable(false);
 
+
         // Display the sprite for both Pokémon
+        // source: https://stackoverflow.com/questions/37521378/how-to-create-a-javafx-image-from-an-absolute-path
         try {
             File fileForPlayerSprite = new File("src/main/resources/Sprites/" + Creature.CREATURE_SPRITE_MAP.get(playerCreatureUpFront.getName())[0]);
             playerSprite.setImage(new Image(fileForPlayerSprite.toURI().toURL().toExternalForm()));
