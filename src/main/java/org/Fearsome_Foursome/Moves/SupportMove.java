@@ -64,7 +64,7 @@ public class SupportMove implements Move {
         this.name = name;
         this.description = description;
         this.color = color;
-        this.imagePath = "src/main/java/resources/Sprites/" + name + ".png";
+        this.imagePath = "src/main/resources/Sprites/" + name + ".png";
     }
 
     /**
