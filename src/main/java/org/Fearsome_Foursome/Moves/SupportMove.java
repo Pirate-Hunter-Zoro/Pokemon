@@ -110,12 +110,11 @@ public class SupportMove implements Move {
         // just make the supporting move visible for a certain amount of time
         try {
             File fileForMoveSprite = new File(this.imagePath);
-            moveImage.setVisible(true);
             moveImage.setImage(new Image(fileForMoveSprite.toURI().toURL().toExternalForm()));
-            HelloPokemon.arenaController.attackMovePlayer.setImage(new Image(fileForMoveSprite.toURI().toURL().toExternalForm()));
             Timeline timeline = new Timeline(
                     new KeyFrame(Duration.ZERO,
-                            event -> this.doAndShowResult(mover)
+                            event -> this.doAndShowResult(mover),
+                            new KeyValue(moveImage.visibleProperty(), true)
                     ),
                     new KeyFrame(Duration.seconds(2),
                             // does someone need to go next, or is the round complete?
