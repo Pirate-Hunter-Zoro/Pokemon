@@ -17,32 +17,32 @@
                 <Image url="@Images/forestBackGround.jpg" />
             </image>
         </ImageView>
+      <ImageView fx:id="supportMoveEnemy" fitHeight="600.0" fitWidth="600.0" layoutX="370.0" layoutY="-150.0" pickOnBounds="true" preserveRatio="true" scaleX="0.75" scaleY="0.75" scaleZ="0.75">
+         <image>
+            <Image url="@Sprites/RECOVER.png" />
+         </image>
+      </ImageView>
         <ImageView fx:id="enemySprite" fitHeight="200.0" fitWidth="200.0" layoutX="550.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" scaleX="0.75" scaleY="0.75" scaleZ="0.75" style="-fx-background-size: contain;">
             <image>
                 <Image url="@Sprites/SnorlaxEnemy.png" />
             </image>
         </ImageView>
-      <ImageView fx:id="supportMoveEnemy" fitHeight="500.0" fitWidth="500.0" layoutX="420.0" layoutY="-70.0" pickOnBounds="true" preserveRatio="true" scaleX="0.75" scaleY="0.75" scaleZ="0.75">
-         <image>
-            <Image url="@Sprites/RECOVER.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="playerTackleSprite" fitHeight="200.0" fitWidth="200.0" layoutX="520.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" scaleX="0.75" scaleY="0.75" scaleZ="0.75">
+      <ImageView fx:id="playerTackleSprite" fitHeight="200.0" fitWidth="200.0" layoutX="520.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" scaleX="0.75" scaleY="0.75" scaleZ="0.75" visible="false">
          <image>
             <Image url="@Sprites/SceptileAlly.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="attackMoveEnemy" fitHeight="250.0" fitWidth="250.0" layoutX="400.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" rotate="-150.0">
+      <ImageView fx:id="attackMoveEnemy" fitHeight="250.0" fitWidth="250.0" layoutX="400.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" rotate="-150.0" visible="false">
          <image>
             <Image url="@Sprites/SURF.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="attackMovePlayer" fitHeight="250.0" fitWidth="250.0" layoutX="370.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" rotate="20.0">
+      <ImageView fx:id="attackMovePlayer" fitHeight="250.0" fitWidth="250.0" layoutX="370.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" rotate="20.0" visible="false">
          <image>
             <Image url="@Sprites/HYPERBEAM.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="enemyTackleSprite" fitHeight="200.0" fitWidth="200.0" layoutX="350.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="enemyTackleSprite" fitHeight="200.0" fitWidth="200.0" layoutX="350.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@Sprites/SnorlaxEnemy.png" />
          </image>
