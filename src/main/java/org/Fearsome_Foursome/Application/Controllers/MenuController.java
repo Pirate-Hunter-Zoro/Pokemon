@@ -106,8 +106,8 @@ public class MenuController {
         // Get the Stage object of this button
         Stage stage = (Stage) btnNormalMode.getScene().getWindow();
         HelloPokemon.loadScene(stage, HelloPokemon.GameScenes.POKEMON_ARENA);
-        HelloPokemon.arenaController.setUpPokemon();
-        HelloPokemon.arenaController.setInitialBattleTextLog();
+//        HelloPokemon.arenaController.setUpPokemon();
+//        HelloPokemon.arenaController.setInitialBattleTextLog();
     }
 
     /**
