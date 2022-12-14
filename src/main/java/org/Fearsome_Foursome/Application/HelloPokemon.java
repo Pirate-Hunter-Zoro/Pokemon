@@ -35,7 +35,7 @@ public class HelloPokemon extends Application {
     private static Clip clip;
 
     /** Music is currently playing */
-    private static boolean musicIsPlaying = true;
+    private static boolean musicIsPlaying = false;
 
     /**
      * We need an enumeration for all of our Scenes - a public inner class
