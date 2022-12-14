@@ -72,7 +72,7 @@ public class MenuController {
     private Text version;
 
     /** Do we play music or not? */
-    public static boolean playMusic = false;
+    public static boolean playMusic = true;
 
 
     @FXML
